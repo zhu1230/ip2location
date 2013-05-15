@@ -1,6 +1,11 @@
 = ip2location
 
-Description goes here.
+== Usage
+
+    i2l = Ip2location.new.open(File.dirname(__FILE__) + "/assets/IP-COUNTRY-SAMPLE.bin")
+    record = i2l.get_all('13.5.10.6')
+    record.should_not be_nil
+    record.country_short.should == 'US'
 
 == Contributing to ip2location
  
