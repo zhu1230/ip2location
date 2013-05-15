@@ -1,5 +1,4 @@
 # encoding: utf-8
-require 'awesome_print'
 require 'bindata'
 require 'ipaddr'
 require 'ip2location/ip2location_config'
