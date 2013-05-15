@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "ip2location.gemspec",
     "lib/ip2location.rb",
     "lib/ip2location/database_config.rb",
     "lib/ip2location/i2l_float_data.rb",
