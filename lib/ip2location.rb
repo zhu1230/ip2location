@@ -1,15 +1,13 @@
 # encoding: utf-8
-require 'bundler'
-Bundler.require
 require 'awesome_print'
 require 'bindata'
 require 'ipaddr'
-require 'libs/ip2location_config'
-require 'libs/database_config'
-require 'libs/i2l_float_data'
-require 'libs/i2l_string_data'
-require 'libs/i2l_ip_data'
-require 'libs/ip2location_record'
+require 'ip2location/ip2location_config'
+require 'ip2location/database_config'
+require 'ip2location/i2l_float_data'
+require 'ip2location/i2l_string_data'
+require 'ip2location/i2l_ip_data'
+require 'ip2location/ip2location_record'
 
 class Ip2location
   attr_accessor :v4, :file, :db_index, :count, :base_addr, :ipno, :count, :record, :database, :columns, :ip_version
