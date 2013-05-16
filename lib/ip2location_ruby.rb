@@ -1,15 +1,15 @@
 # encoding: utf-8
 require 'bindata'
 require 'ipaddr'
-require 'ip2location/ip2location_config'
-require 'ip2location/database_config'
-require 'ip2location/i2l_float_data'
-require 'ip2location/i2l_string_data'
-require 'ip2location/i2l_ip_data'
-require 'ip2location/ip2location_record'
+require 'ip2location_ruby/ip2location_config'
+require 'ip2location_ruby/database_config'
+require 'ip2location_ruby/i2l_float_data'
+require 'ip2location_ruby/i2l_string_data'
+require 'ip2location_ruby/i2l_ip_data'
+require 'ip2location_ruby/ip2location_record'
 
 class Ip2location
-  attr_accessor :v4, :file, :db_index, :count, :base_addr, :ipno, :count, :record, :database, :columns, :ip_version
+  attr_accessor :record_class, :v4, :file, :db_index, :count, :base_addr, :ipno, :count, :record, :database, :columns, :ip_version
   
   def open(url)
     self.file = File.open(File.expand_path url, 'rb')
@@ -20,7 +20,7 @@ class Ip2location
     self.columns = i2l.databasecolumn + 0
     self.database = DbConfig.setup_database(self.db_index)
     self.ip_version = (i2l.ipversion == 0 ? 4 : 6)
-    Ip2LocationRecord.init database, self.ip_version
+    self.record_class = (Ip2LocationRecord.init database, self.ip_version)
     self
   end
   
@@ -65,7 +65,7 @@ class Ip2location
     else
       from_base = ( base_addr + mid * col_length)
       file.seek(from_base)  
-      return Ip2LocationRecord.read(file)
+      return self.record_class.read(file)
     end
   end
     

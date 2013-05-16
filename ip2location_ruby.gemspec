@@ -4,7 +4,7 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "ip2location"
+  s.name = "ip2location_ruby"
   s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
@@ -25,16 +25,16 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
-    "ip2location.gemspec",
-    "lib/ip2location.rb",
-    "lib/ip2location/database_config.rb",
-    "lib/ip2location/i2l_float_data.rb",
-    "lib/ip2location/i2l_ip_data.rb",
-    "lib/ip2location/i2l_string_data.rb",
-    "lib/ip2location/ip2location_config.rb",
-    "lib/ip2location/ip2location_record.rb",
+    "ip2location_ruby.gemspec",
+    "lib/ip2location_ruby.rb",
+    "lib/ip2location_ruby//database_config.rb",
+    "lib/ip2location_ruby/i2l_float_data.rb",
+    "lib/ip2location_ruby/i2l_ip_data.rb",
+    "lib/ip2location_ruby/i2l_string_data.rb",
+    "lib/ip2location_ruby/ip2location_config.rb",
+    "lib/ip2location_ruby/ip2location_record.rb",
     "spec/assets/IP-COUNTRY-SAMPLE.BIN",
-    "spec/ip2location_spec.rb",
+    "spec/ip2location_ruby_spec.rb",
     "spec/spec_helper.rb"
   ]
   s.homepage = "http://github.com/zhu1230/ip2location"

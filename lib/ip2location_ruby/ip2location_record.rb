@@ -1,6 +1,7 @@
-class Ip2LocationRecord <BinData::Record
+class Ip2LocationRecord 
   def self.init(database, ip_version)
-    Ip2LocationRecord.class_eval {
+    cls = Class.new(BinData::Record)
+    cls.class_eval {
       endian :little
       i2l_ip_data :ip_from, :ip_version => ip_version
       
@@ -16,6 +17,7 @@ class Ip2LocationRecord <BinData::Record
       end
       
       i2l_ip_data :ip_to, :ip_version => ip_version
-    } 
+    }
+    cls 
   end
 end
