@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "ip2location_ruby"
-  s.version = "0.1.2"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Vincent.Z"]
-  s.date = "2013-05-15"
+  s.date = "2013-05-16"
   s.description = "the ip2location ruby library"
   s.email = "zhu1230@gmail.com"
   s.extra_rdoc_files = [
@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
     "VERSION",
     "ip2location_ruby.gemspec",
     "lib/ip2location_ruby.rb",
-    "lib/ip2location_ruby//database_config.rb",
+    "lib/ip2location_ruby/database_config.rb",
     "lib/ip2location_ruby/i2l_float_data.rb",
     "lib/ip2location_ruby/i2l_ip_data.rb",
     "lib/ip2location_ruby/i2l_string_data.rb",
