@@ -14,7 +14,7 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "ip2location"
+  gem.name = "ip2location_ruby"
   gem.homepage = "http://github.com/zhu1230/ip2location"
   gem.license = "MIT"
   gem.summary = %Q{the ip2location ruby library}
