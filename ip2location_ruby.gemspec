@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Vincent.Z"]
-  s.date = "2014-01-08"
+  s.date = "2014-01-09"
   s.description = "the ip2location ruby library"
   s.email = "zhu1230@gmail.com"
   s.extra_rdoc_files = [
