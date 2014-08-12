@@ -27,25 +27,19 @@ class Ip2location
   def get_all(ip)
     ipno = IPAddr.new(ip, Socket::AF_UNSPEC)
     self.ip_version = ipno.ipv4? ? 4 : 6
-    self.count = ipno.ipv4? ? self.ipv4databasecount + 0 : self.ipv6databasecount + 0
-    self.base_addr = (ipno.ipv4? ? self.ipv4databaseaddr + 0 - 1 : self.ipv6databaseaddr + 0 - 1)
-    self.record_class = (Ip2LocationRecord.init database, self.ip_version)
     self.v4 = ipno.ipv4?
+    self.count = ipno.ipv4? ? self.ipv4databasecount + 0 : self.ipv6databasecount + 0
+    self.base_addr = (ipno.ipv4? ? self.ipv4databaseaddr - 1 : self.ipv6databaseaddr - 1)
+    self.record_class = (Ip2LocationRecord.init database, self.ip_version)
+    
     ipnum = ipno.to_i + 0
-    mid =  self.count/2
     col_length = columns * 4
-    low = 0
-    high = count
 
-    return self.record = bsearch(low, high, ipnum, self.base_addr, col_length)
+    return self.record = bsearch(0, self.count, ipnum, self.base_addr, col_length)
   end
   
   def get_from_to(mid, base_addr, col_length)
-    if v4
-      from_base = ( base_addr + mid * col_length)
-    else
-      from_base = ( base_addr + mid * (col_length + 12))
-    end
+    from_base = ( base_addr + mid * (col_length + (v4 ? 0 : 12)))
     file.seek(from_base)
     ip_from =  v4 ? BinData::Uint32le.read(file) : BinData::Uint128le.read(file)
     file.seek(from_base + col_length + (v4 ? 0 : 12))
