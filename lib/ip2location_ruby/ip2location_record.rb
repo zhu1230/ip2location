@@ -4,7 +4,6 @@ class Ip2LocationRecord
     cls.class_eval {
       endian :little
       i2l_ip_data :ip_from, :ip_version => ip_version
-      
       database.each do |col|
         if [:latitude, :longitude,:elevation].include? col.first
           i2l_float_data col.first
