@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Vincent.Z"]
-  s.date = "2014-07-04"
+  s.date = "2014-08-12"
   s.description = "the ip2location ruby library"
   s.email = "zhu1230@gmail.com"
   s.extra_rdoc_files = [
@@ -35,13 +35,15 @@ Gem::Specification.new do |s|
     "lib/ip2location_ruby/i2l_string_data.rb",
     "lib/ip2location_ruby/ip2location_config.rb",
     "lib/ip2location_ruby/ip2location_record.rb",
+    "spec/assets/DB24.DEMO4.BIN",
+    "spec/assets/DB24.DEMO6.BIN",
     "spec/assets/IP-COUNTRY-SAMPLE.BIN",
     "spec/ip2location_ruby_spec.rb",
     "spec/spec_helper.rb"
   ]
   s.homepage = "http://github.com/zhu1230/ip2location"
   s.licenses = ["MIT"]
-  s.rubygems_version = "2.2.2"
+  s.rubygems_version = "2.4.1"
   s.summary = "the ip2location ruby library"
 
   if s.respond_to? :specification_version then
