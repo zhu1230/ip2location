@@ -5,7 +5,7 @@ class Ip2LocationRecord
       endian :little
       i2l_ip_data :ip_from, :ip_version => ip_version
       database.each do |col|
-        if [:latitude, :longitude,:elevation].include? col.first
+        if [:latitude, :longitude].include? col.first
           i2l_float_data col.first
         elsif col.first == :country
           i2l_string_data :country_short

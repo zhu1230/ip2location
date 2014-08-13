@@ -22,6 +22,27 @@ describe "Ip2location" do
     record.country_short.should == 'DE'
   end
 
+  # it "profile ipv6 in IPV6.BIN" do
+  #   i2l = Ip2location.new.open(File.dirname(__FILE__) + "/assets/IPV6-COUNTRY-REGION-CITY-LATITUDE-LONGITUDE-ZIPCODE-TIMEZONE-ISP-DOMAIN-NETSPEED-AREACODE-WEATHER-MOBILE-ELEVATION-USAGETYPE.BIN")
+  #   File.new(File.dirname(__FILE__) + "/assets/ipv6_ip.txt").readlines.each do |line|
+  #     record = i2l.get_all(line.split(' ').first)
+  #   end
+  # end
+
+  # it "profile ipv4 in IPV6.BIN" do
+  #   i2l = Ip2location.new.open(File.dirname(__FILE__) + "/assets/IPV6-COUNTRY-REGION-CITY-LATITUDE-LONGITUDE-ZIPCODE-TIMEZONE-ISP-DOMAIN-NETSPEED-AREACODE-WEATHER-MOBILE-ELEVATION-USAGETYPE.BIN")
+  #   File.new(File.dirname(__FILE__) + "/assets/ipv4_ip.txt").readlines.each do |line|
+  #     record = i2l.get_all(line.split(' ').first)
+  #   end
+  # end
+
+  # it "profile ipv4 in IPV4.BIN" do
+  #   i2l = Ip2location.new.open(File.dirname(__FILE__) + "/assets/IP-COUNTRY-REGION-CITY-LATITUDE-LONGITUDE-ZIPCODE-TIMEZONE-ISP-DOMAIN-NETSPEED-AREACODE-WEATHER-MOBILE-ELEVATION-USAGETYPE.BIN")
+  #   File.new(File.dirname(__FILE__) + "/assets/ipv4_ip.txt").readlines.each do |line|
+  #     record = i2l.get_all(line.split(' ').first)
+  #   end
+  # end
+
   # this need spec/assets/IP2LOCATION-LITE-DB5.bin file which too big to include in this test.
 
   # it "should get float value of attitude" do
